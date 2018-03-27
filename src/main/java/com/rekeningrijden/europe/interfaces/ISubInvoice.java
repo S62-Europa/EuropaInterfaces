@@ -1,14 +1,29 @@
 package com.rekeningrijden.europe.interfaces;
 
 public interface ISubInvoice {
-    //Primary key for invoiceNumbers.
+    /**
+     * @return The unique identification number.
+     */
     String getInvoiceNumber();
-    //Country where the SubInvoice has to be payed to.
+
+    /**
+     * @return The country which issued the (sub-)invoice.
+     */
     String getCountry();
-    //Is this sub invoice payed already/
+
+    /**
+     * @return The status whether the (sub-)invoice has been payed.
+     */
     boolean getPaymentStatus();
-    //Date of the subinvoice
+
+    /**
+     * @return The date the (sub-)invoice was issued.
+     */
     String getInvoiceDate();
-    //Price calculated by the country where the subinvoice is made and where the user has driven.
+
+    /**
+     * @return The price calculated for the (sub-)invoice. The price is
+     * calcuated by the country where vehicle travelled.
+     */
     double getPrice();
 }
