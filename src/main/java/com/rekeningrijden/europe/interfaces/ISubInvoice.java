@@ -1,4 +1,4 @@
-package Interfaces;
+package com.rekeningrijden.europe.interfaces;
 
 public interface ISubInvoice {
     //Primary key for invoiceNumbers.

@@ -1,4 +1,4 @@
-package Interfaces;
+package com.rekeningrijden.europe.interfaces;
 
 public interface ITransLocation {
     //Latitude from car tracker created at simulation system.
