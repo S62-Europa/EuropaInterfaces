@@ -3,9 +3,18 @@ package com.rekeningrijden.europe.dtos;
 import java.util.List;
 
 public class VehicleDto {
-    private String HashedLicensePlate;             //Hashes license plate of the car, used to find the owner at the government system.
-    private List<JourneyDto> Journeys;               //List of all journeys this car made.
-    private List<SubInvoiceDto> SubInvoices;         //List of all sub invoices this car made.
+    /**
+     * Hashes license plate of the car, used to find the owner at the government system.
+     */
+    private String HashedLicensePlate;
+    /**
+     * List of all journeys this car made.
+     */
+    private List<JourneyDto> Journeys;               
+    /**
+     * List of all sub invoices this car made.
+     */
+    private List<SubInvoiceDto> SubInvoices;
 
     public VehicleDto(String hashedLicensePlate, List<JourneyDto> journeys, List<SubInvoiceDto> subInvoices) {
         HashedLicensePlate = hashedLicensePlate;

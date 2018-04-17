@@ -1,11 +1,26 @@
 package com.rekeningrijden.europe.dtos;
 
 public class SubInvoiceDto {
+    /**
+     * primary key.
+     */
     private String invoiceNumber;
-    private String country;             //Country where the SubInvoice has to be payed to.
-    private String paymentStatus;      //Is this sub invoice payed already/
-    private String invoiceDate;         //Date of the subinvoice
-    private String price;               //Price calculated by the country where the subinvoice is made and where the user has driven.
+    /**
+     * Country where the SubInvoice has to be payed to.
+     */
+    private String country;
+    /**
+     * Is this sub invoice payed already.
+     */
+    private String paymentStatus;
+    /**
+     * Date of the subinvoice.
+     */
+    private String invoiceDate;
+    /**
+     * Price calculated by the country where the subinvoice is made and where the user has driven.
+     */
+    private String price;
 
     public SubInvoiceDto(String invoiceNumber, String country, String paymentStatus, String invoiceDate, String price) {
         this.invoiceNumber = invoiceNumber;
