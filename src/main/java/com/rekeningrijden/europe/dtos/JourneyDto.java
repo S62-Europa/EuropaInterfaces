@@ -1,4 +1,4 @@
-package Dtos;
+package com.rekeningrijden.europe.dtos;
 
 import java.util.List;
 
