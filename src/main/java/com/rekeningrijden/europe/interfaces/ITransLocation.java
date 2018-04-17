@@ -1,14 +1,30 @@
 package com.rekeningrijden.europe.interfaces;
 
 public interface ITransLocation {
-    //Latitude from car tracker created at simulation system.
+    /**
+     * @return The lattitude the vehicle was located at the time of measuring.
+     */
     Double getLat();
-    //Longitude from car tracker created at simulation system.
+
+    /**
+     * @return The longitude the vehicle was located at the time of measuring.
+     */
     Double getLon();
-    //Date and time of this TransLocation.
+
+    /**
+     * @return The time, accurate up until the the millisecond, when the car was
+     * recorded at a location.
+     */
     String getDateTime();
-    //Serial number of the car tracker, used in the government system to find the hashed license plate and owner.
+
+    /**
+     * @return The serial number of the car tracker used by the government to
+     * keep track of the vehicles on their roads.
+     */
     String getSerialNumber();
-    //Country where this TransLocation is driven at.
+
+    /**
+     * @return The country code of where the vehicle has driven.
+     */
     String getCountryCode();
 }

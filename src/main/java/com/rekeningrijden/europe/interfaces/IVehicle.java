@@ -3,10 +3,19 @@ package com.rekeningrijden.europe.interfaces;
 import java.util.List;
 
 public interface IVehicle {
-    //Hashes license plate of the car, used to find the owner at the government system.
+    /**
+     * @return The hashed license plate of the car.
+     */
     String getHashedLicensePlate();
-    //List of all journeys this car made.
+
+    /**
+     * @return The list of all journeys a vehicle has made.
+     */
     List<IJourney> getJourneys();
-    //List of all sub invoices this car made.
+    
+    /**
+     * @return The list of all (sub-)invoices which have been issued to this
+     * vehicle.
+     */
     List<ISubInvoice> getSubInvoices();
 }
