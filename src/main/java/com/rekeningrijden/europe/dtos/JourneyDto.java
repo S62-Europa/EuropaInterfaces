@@ -1,19 +1,34 @@
 package com.rekeningrijden.europe.dtos;
 
-import java.util.List;
+import java.io.Serializable;
 
-public class JourneyDto {
-    List<TransLocationDto> transLocationDtos;
+public class JourneyDto implements Serializable {
 
-    public JourneyDto(List<TransLocationDto> transLocationDtos) {
-        this.transLocationDtos = transLocationDtos;
+    private Long id;
+    private String translocationUri;
+
+    public JourneyDto() {
     }
 
-    public List<TransLocationDto> getTransLocationDtos() {
-        return transLocationDtos;
+    public JourneyDto(Long id, String translocationUri) {
+        this.id = id;
+        this.translocationUri = translocationUri;
     }
 
-    public void setTransLocationDtos(List<TransLocationDto> transLocationDtos) {
-        this.transLocationDtos = transLocationDtos;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTranslocationUri() {
+        return translocationUri;
+    }
+
+    public void setTranslocationUri(String translocationUri) {
+        this.translocationUri = translocationUri;
     }
 }
+

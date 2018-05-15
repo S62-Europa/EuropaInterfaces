@@ -1,36 +1,43 @@
 package com.rekeningrijden.europe.dtos;
 
-import java.util.List;
+import java.io.Serializable;
 
-public class VehicleDto {
-    /**
-     * Hashes license plate of the car, used to find the owner at the government system.
-     */
-    private String HashedLicensePlate;
-    /**
-     * List of all journeys this car made.
-     */
-    private List<JourneyDto> Journeys;               
-    /**
-     * List of all sub invoices this car made.
-     */
-    private List<SubInvoiceDto> SubInvoices;
+public class VehicleDto implements Serializable {
 
-    public VehicleDto(String hashedLicensePlate, List<JourneyDto> journeys, List<SubInvoiceDto> subInvoices) {
-        HashedLicensePlate = hashedLicensePlate;
-        Journeys = journeys;
-        SubInvoices = subInvoices;
+    private String hashedLicensePlate;
+    private String journeyUri;
+    private String subInvoiceUri;
+
+    public VehicleDto() {
+    }
+
+    public VehicleDto(String hashedLicensePlate, String journeyUri, String subInvoiceUri) {
+        this.hashedLicensePlate = hashedLicensePlate;
+        this.journeyUri = journeyUri;
+        this.subInvoiceUri = subInvoiceUri;
+    }
+
+    public void setHashedLicensePlate(String hashedLicensePlate) {
+        this.hashedLicensePlate = hashedLicensePlate;
+    }
+
+    public void setJourneyUri(String journeyUri) {
+        this.journeyUri = journeyUri;
+    }
+
+    public void setSubInvoiceUri(String subInvoiceUri) {
+        this.subInvoiceUri = subInvoiceUri;
     }
 
     public String getHashedLicensePlate() {
-        return HashedLicensePlate;
+        return hashedLicensePlate;
     }
 
-    public List<JourneyDto> getJourneys() {
-        return Journeys;
+    public String getJourneyUri() {
+        return journeyUri;
     }
 
-    public List<SubInvoiceDto> getSubInvoices() {
-        return SubInvoices;
+    public String getSubInvoiceUri() {
+        return subInvoiceUri;
     }
 }
