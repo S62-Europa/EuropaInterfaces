@@ -1,36 +1,58 @@
 package com.rekeningrijden.europe.dtos;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class VehicleDto {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class VehicleDto implements Serializable {
     /**
      * Hashes license plate of the car, used to find the owner at the government system.
      */
-    private String HashedLicensePlate;
+    @NonNull
+    public String HashedLicensePlate;
+
+    /**
+     * Serial number of the car tracker
+     */
+    @NonNull
+    public String serialNumber;
+
+    /**
+     * Origin country of the car
+     */
+    @NonNull
+    public String originCountry;
+
     /**
      * List of all journeys this car made.
      */
-    private List<JourneyDto> Journeys;               
+    @NonNull
+    public List<JourneyDto> Journeys = new ArrayList<JourneyDto>();
+
     /**
      * List of all sub invoices this car made.
      */
-    private List<SubInvoiceDto> SubInvoices;
+    @NonNull
+    public List<SubInvoiceDto> SubInvoices = new ArrayList<SubInvoiceDto>();
 
-    public VehicleDto(String hashedLicensePlate, List<JourneyDto> journeys, List<SubInvoiceDto> subInvoices) {
-        HashedLicensePlate = hashedLicensePlate;
-        Journeys = journeys;
-        SubInvoices = subInvoices;
-    }
+    /**
+     * Uri to the List of all journeys this car made.
+     */
+    @NonNull
+    public String JourneysURI;
 
-    public String getHashedLicensePlate() {
-        return HashedLicensePlate;
-    }
+    /**
+     * Uri to the List of all sub invoices this car made.
+     */
+    @NonNull
+    public String SubInvoicesURI;
 
-    public List<JourneyDto> getJourneys() {
-        return Journeys;
-    }
-
-    public List<SubInvoiceDto> getSubInvoices() {
-        return SubInvoices;
-    }
 }
