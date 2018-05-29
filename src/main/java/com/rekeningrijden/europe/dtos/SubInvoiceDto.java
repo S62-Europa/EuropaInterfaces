@@ -1,52 +1,44 @@
 package com.rekeningrijden.europe.dtos;
 
-public class SubInvoiceDto {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+
+import java.io.Serializable;
+import java.util.UUID;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class SubInvoiceDto implements Serializable {
     /**
-     * primary key.
+     * primary key as a UUID.
      */
-    private String invoiceNumber;
+    @NonNull
+    public UUID invoiceNumber;
+
     /**
      * Country where the SubInvoice has to be payed to.
      */
-    private String country;
+    @NonNull
+    public String country;
+
     /**
      * Is this sub invoice payed already.
      */
-    private String paymentStatus;
+    @NonNull
+    public String paymentStatus;
+
     /**
      * Date of the subinvoice.
      */
-    private String invoiceDate;
+    @NonNull
+    public String invoiceDate;
+
     /**
      * Price calculated by the country where the subinvoice is made and where the user has driven.
      */
-    private String price;
-
-    public SubInvoiceDto(String invoiceNumber, String country, String paymentStatus, String invoiceDate, String price) {
-        this.invoiceNumber = invoiceNumber;
-        this.country = country;
-        this.paymentStatus = paymentStatus;
-        this.invoiceDate = invoiceDate;
-        this.price = price;
-    }
-
-    public String getInvoiceNumber() {
-        return invoiceNumber;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public String getPaymentStatus() {
-        return paymentStatus;
-    }
-
-    public String getInvoiceDate() {
-        return invoiceDate;
-    }
-
-    public String getPrice() {
-        return price;
-    }
+    @NonNull
+    public int price;
 }

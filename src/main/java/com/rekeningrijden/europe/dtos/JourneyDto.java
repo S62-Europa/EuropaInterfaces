@@ -1,19 +1,21 @@
 package com.rekeningrijden.europe.dtos;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class JourneyDto {
-    List<TransLocationDto> transLocationDtos;
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class JourneyDto implements Serializable {
+    @NonNull
+    public List<TransLocationDto> transLocationDtos = new ArrayList<TransLocationDto>();
 
-    public JourneyDto(List<TransLocationDto> transLocationDtos) {
-        this.transLocationDtos = transLocationDtos;
-    }
-
-    public List<TransLocationDto> getTransLocationDtos() {
-        return transLocationDtos;
-    }
-
-    public void setTransLocationDtos(List<TransLocationDto> transLocationDtos) {
-        this.transLocationDtos = transLocationDtos;
-    }
+    @NonNull
+    public String transLocationDtosURI;
 }
