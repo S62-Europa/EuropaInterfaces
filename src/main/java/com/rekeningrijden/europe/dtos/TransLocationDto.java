@@ -7,6 +7,10 @@ import lombok.NonNull;
 
 import java.io.Serializable;
 
+/**
+ * Translocation data transfer object used to communicate via a uniform way with
+ * the international European systems.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,25 +19,30 @@ public class TransLocationDto implements Serializable {
      * Latitude from car tracker created at simulation system.
      */
     @NonNull
-    public double lat;
+    private double lat;
+
     /**
      * Longitude from car tracker created at simulation system.
      */
     @NonNull
-    public double lon;
+    private double lon;
+
     /**
      * Date and time of this TransLocation.
      */
     @NonNull
-    public String dateTime;
+    private String dateTime;
+
     /**
-     * Serial number of the car tracker, used in the government system to find the hashed license plate and owner.
+     * Unique serial number of the car tracker, used in the government
+     * administration system to find the car and its owner.
      */
     @NonNull
-    public String serialNumber;
+    private String serialNumber;
+
     /**
      * Country where this TransLocation is driven at.
      */
     @NonNull
-    public String countryCode;
+    private String countryCode;
 }

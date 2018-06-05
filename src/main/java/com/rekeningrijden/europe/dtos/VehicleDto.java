@@ -9,50 +9,55 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Vehicle data transfer object used to communicate via a uniform way with the
+ * international European systems.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class VehicleDto implements Serializable {
     /**
-     * Hashes license plate of the car, used to find the owner at the government system.
+     * Hashed license plate of the car, used to find the owner via the
+     * government administration system.
      */
     @NonNull
-    public String HashedLicensePlate;
+    private String hashedLicensePlate;
 
     /**
-     * Serial number of the car tracker
+     * Serial number of the car tracker.
      */
     @NonNull
-    public String serialNumber;
+    private String serialNumber;
 
     /**
-     * Origin country of the car
+     * Origin country of the car.
      */
     @NonNull
-    public String originCountry;
+    private String originCountry;
 
     /**
      * List of all journeys this car made.
      */
     @NonNull
-    public List<JourneyDto> Journeys = new ArrayList<JourneyDto>();
+    private List<JourneyDto> journeys = new ArrayList<JourneyDto>();
 
     /**
      * List of all sub invoices this car made.
      */
     @NonNull
-    public List<SubInvoiceDto> SubInvoices = new ArrayList<SubInvoiceDto>();
+    private List<SubInvoiceDto> subInvoices = new ArrayList<SubInvoiceDto>();
 
     /**
      * Uri to the List of all journeys this car made.
      */
     @NonNull
-    public String JourneysURI;
+    private String journeysURI;
 
     /**
      * Uri to the List of all sub invoices this car made.
      */
     @NonNull
-    public String SubInvoicesURI;
+    private String subInvoicesURI;
 
 }
