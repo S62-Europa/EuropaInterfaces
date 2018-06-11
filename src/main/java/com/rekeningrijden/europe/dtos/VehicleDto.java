@@ -47,17 +47,4 @@ public class VehicleDto implements Serializable {
      */
     @NonNull
     private List<SubInvoiceDto> subInvoices = new ArrayList<SubInvoiceDto>();
-
-    /**
-     * Uri to the List of all journeys this car made.
-     */
-    @NonNull
-    private String journeysURI;
-
-    /**
-     * Uri to the List of all sub invoices this car made.
-     */
-    @NonNull
-    private String subInvoicesURI;
-
 }
