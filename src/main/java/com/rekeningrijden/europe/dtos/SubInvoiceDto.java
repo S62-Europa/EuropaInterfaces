@@ -41,4 +41,10 @@ public class SubInvoiceDto implements Serializable {
      */
     @NonNull
     public int price;
+
+    /**
+     * Get the serial number of the tracker inside a vehicle, used to determine to which vehicle an SubInvoice belongs
+     */
+    @NonNull
+    public String carTracker;
 }
