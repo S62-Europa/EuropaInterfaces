@@ -11,4 +11,10 @@ public interface ISubInvoice {
     String getInvoiceDate();
     //Price calculated by the country where the subinvoice is made and where the user has driven.
     double getPrice();
+
+    /**
+     * Get the car tracker's serial number
+     * @return Serial number of the car tracker
+     */
+    String getCarTrackerId();
 }
