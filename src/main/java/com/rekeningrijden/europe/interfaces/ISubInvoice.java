@@ -16,5 +16,5 @@ public interface ISubInvoice {
      * Get the car tracker's serial number
      * @return Serial number of the car tracker
      */
-    String getCarTracker();
+    String getCarTrackerId();
 }
