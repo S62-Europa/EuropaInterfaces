@@ -18,6 +18,6 @@ Add this project to your dependencies
 	<dependency>
 	    <groupId>com.github.luudvkeulen</groupId>
 	    <artifactId>EuropaInterfaces</artifactId>
-	    <version>1.0.0</version>
+	    <version>1.2.1</version>
 	</dependency>
 ```
